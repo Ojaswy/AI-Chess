@@ -1,0 +1,69 @@
+Chess Engine
+
+The Chess Engine which has been developed, uses conventional chess rules to allow users to play the game. Logic for Castling
+have not been included due to conflict with the Artificial Intelligence. The possible moves for each piece is generated 
+logically for each piece individually before a turn. Once generated, it can be tested to check the legality of the users' 
+inputs. This becomes the important guideline for the AI.
+
+
+
+FUNCTIONS
+
+void COMP(int board[8][8]);
+-Used for computation for the AI of the chess game. Changes value of global variables which when inputted moves a piece on
+the chess board.
+
+void CHESSBOARD(int board[8][8]);
+-Prints a black and white chess board with red and magenta coloured pieces.
+
+void MOVES(int board[8][8]);
+-Checks and stores the moves which the pieces of chess can make in their next turn.
+
+void CHECK(int turn,int board[8][8]);
+-Displays ‘Check’ or ‘Checkmate’ when necessary.
+
+int INVALID(int board[8][8],int turnval1,int turnval2,int xcom,int ycom,int xval,int yval,int turn);
+-Checks for the validity of a move and moves the piece virtually.
+
+void main()
+	-Takes the input from the user and calls appropriate functions.
+
+
+
+AI development
+
+Since there is no machine learning involved in this project, it relies entirely on core valuation of movements of individual 
+pieces.  We have defined the value of each move as.
+ 
+V(m) = [sig(C) + sig(A) + sig (Ch)] ^ ([It+1] / [Ft+1] ) / ( [63-Ei] / [63-Ef] )
+
+
+Base Rating = [sig(C) + sig(A) + sig (Ch)]
+
+‘C’ is defined as Cover value which is the summation of the priority of pieces being covered.
+‘A‘ is defined as Attack Value which is the summation of the priority of  enemy pieces that are vulnerable to the AI’s pieces.
+‘Ch’ is defined as the summation of Priority of individual pieces times the number of moves each of those pieces are free to
+commit. 
+
+The power of the function is the most critical part.
+
+Power = ([It+1] / [Ft+1]) / ([63-Ei] / [63-Ef])
+
+
+Here, ‘It’ denotes the priority Threat, of all the pieces combined at the beginning of the move. Similarly, ‘Ft’ denotes the
+priority Threat of all the pieces combined at the end of a move. Ei denotes the score of the enemy at the beginning of a move.
+Ef denotes the enemy score at the end of a move. 
+
+Threat Ratio = ([It+1] / [Ft+1])
+
+1 has been added to each number to prevent any Zero division error. 
+
+Enemy Score ratio = ([63-Ei] / [63-Ef])
+
+The above ratio calculates the initial score of all enemy units combined, by the combined enemy score after a particular piece has been moved.
+A favorable ratio, gives a value that is greater than 1. The initial ratio was Ef/Ei however; this ratio would be infinitely small to make any effect as they would have a base rating of 62.
+
+The unified equation can be used recursively, to form a more elicit Turing model of ‘alpha-beta pruning’. The algorithm is based on doctrines of Decision theory in which, decisions to be 
+taken are a multiplication of favorableness of individual decisions.
+
+However due to the lack of computing capabilities and limited time of a Blitz chess game, we have allowed only for a two-stage calculation.

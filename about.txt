@@ -1,4 +1,4 @@
-Chess Engine
+Chess Engine 
 
 The Chess Engine which has been developed, uses conventional chess rules to allow users to play the game. Logic for Castling
 have not been included due to conflict with the Artificial Intelligence. The possible moves for each piece is generated 

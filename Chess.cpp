@@ -5,7 +5,7 @@
 struct AI
 {
 	int cover,attack,value,tini,fini,enei,enef,chance;
-};
+}; 
  void MOVES(int board[8][8]);
 
 struct Piece

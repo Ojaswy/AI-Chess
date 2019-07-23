@@ -8,7 +8,7 @@ inputs. This becomes the important guideline for the AI.
 
 
 FUNCTIONS
- 
+  
 void COMP(int board[8][8]);
 -Used for computation for the AI of the chess game. Changes value of global variables which when inputted moves a piece on
 the chess board.

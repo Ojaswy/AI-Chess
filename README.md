@@ -8,6 +8,6 @@ Here, A player plays against an AI.
 This does not include a learning model(still under development), and instead just selects the most valuable move to make.
  
  
- 
+  
               
  

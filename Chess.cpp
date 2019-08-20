@@ -1,4 +1,4 @@
-#include<iostream.h>
+#include<iostream.h>       
 #include<conio.h>
 #include<process.h>  
 #include<iomanip.h> 

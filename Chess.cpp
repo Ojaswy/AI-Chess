@@ -1,7 +1,7 @@
 #include<iostream.h>       
 #include<conio.h>
 #include<process.h>  
-#include<iomanip.h> 
+#include<iomanip.h>     
 struct AI
 {
          int cover,attack,value,tini,fini,enei,enef,chance; 

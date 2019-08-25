@@ -6,7 +6,7 @@ logically for each piece individually before a turn. Once generated, it can be t
 inputs. This becomes the important guideline for the AI.
                                                                                          
  
- 
+  
 FUNCTIONS
   
 void COMP(int board[8][8]);

@@ -1,5 +1,5 @@
 #include<iostream.h>       
-#include<conio.h> 
+#include<conio.h>  
 #include<process.h>  
 #include<iomanip.h>     
 struct AI

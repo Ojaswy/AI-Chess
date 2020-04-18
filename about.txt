@@ -5,7 +5,7 @@ have not been included due to conflict with the Artificial Intelligence. The pos
 logically for each piece individually before a turn. Once generated, it can be tested to check the legality of the users' 
 inputs. This becomes the important guideline for the AI.
                                                                                          
-  
+   
   
 FUNCTIONS
   
